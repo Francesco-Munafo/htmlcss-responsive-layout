@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'PT Sans', sans-serif;
+    line-height: 1.8rem;
+}
+
 /* #region Utilities */
 
 :root{
@@ -20,5 +25,151 @@
      
 }
 
+.container{
+    max-width: 1152px;
+    width: 80%;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.col-4{
+    width: calc(100% / 12 * 4);
+}
+
+.col-6{
+    width: calc(100% / 12 * 6);
+}
+
+.col-8{
+    width: calc(100% / 12 * 8);
+}
+
+.col-12{
+    width: 100%;
+}
+.d-flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-end{
+    justify-content: flex-end;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.list_inline > li, .list_inline > li a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--rl-font-light);
+}
+
+.list_inline > li{
+    padding: 0 1rem;
+}
 
 /* #endregion Utilities */
+
+
+/* #region Header */
+
+#site_header{
+    background-color: var(--rl-main);
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.mobile_menu > i{
+    color: var(--rl-font-light);
+}
+
+header nav > .desktop_menu, header nav > .start{
+    display: none;
+}
+
+
+
+.start{
+    border: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+}
+
+/* #endregion Header */
+
+/* #region Main */
+
+
+.demo .row{
+    background-color: var(--rl-main-light);
+    padding: 3rem 3rem 0rem 3rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+}
+
+.demo .col-12 > h2, .demo .col-12 > i{
+    color: var(--rl-main);
+    margin-bottom: 1.5rem;
+}
+
+.demo .col-12 > p{
+    color: var(--rl-font-light-dark);
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.appstore{
+    border: none;
+    padding: 0.7rem 4rem;
+    border-radius: 20px;
+    background-color: var(--rl-main);
+    color: var(--rl-font-light);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+}
+
+.demo img{
+    margin-top: 2rem;
+}
+
+
+/* #endregion Main */
+
+
+
+
+
+
+
+
+
+/* #region Media */
+
+@media screen and {
+    
+}
+
+/* #endregion Media */
+
