@@ -27,7 +27,7 @@ body{
 
 .container{
     max-width: 1152px;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 
@@ -35,6 +35,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1rem;
+    gap: 2rem;
 }
 
 .col-4{
@@ -75,6 +76,14 @@ body{
     text-align: center;
 }
 
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}
+
 .list_inline > li, .list_inline > li a{
     display: inline-block;
     text-decoration: none;
@@ -92,6 +101,7 @@ body{
 
 #site_header{
     background-color: var(--rl-main);
+    margin-bottom: 1rem;
 }
 
 header nav{
@@ -121,13 +131,19 @@ header nav > .desktop_menu, header nav > .start{
 
 /* #region Main */
 
+/****************************************************
 
-.demo .row{
+                SECTION 1 - DEMO
+
+****************************************************/
+
+
+.demo [class^='col-']{
     background-color: var(--rl-main-light);
     padding: 3rem 3rem 0rem 3rem;
-    margin-top: 2rem;
     border-radius: 20px;
 }
+
 
 .demo .col-12 > h2, .demo .col-12 > i{
     color: var(--rl-main);
@@ -155,6 +171,18 @@ header nav > .desktop_menu, header nav > .start{
 }
 
 
+
+/****************************************************
+
+                SECTION 2 - PLANNING
+
+****************************************************/
+
+
+
+
+
+
 /* #endregion Main */
 
 
@@ -167,7 +195,39 @@ header nav > .desktop_menu, header nav > .start{
 
 /* #region Media */
 
-@media screen and {
+@media screen and (min-width: 768px) { 
+
+    
+
+    
+    .d-md-none{
+        display: none;
+    }
+    
+    .d-md-block{
+        display: block;
+    }
+    
+    .row{
+        gap: 1rem;
+    }
+    
+    .col-md-4{
+        width: calc((100% / 12 * 4) - 1rem);
+        margin-top: 0;
+    }
+
+    .col-md-6{
+        width: calc(100% / 12 * 6);
+    }
+
+    .col-md-8{
+        width: calc((100% / 12 * 8) - 1rem);
+    }
+
+    .col-md-12{
+        width: 100%;
+    }
     
 }
 
