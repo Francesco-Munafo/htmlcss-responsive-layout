@@ -52,6 +52,7 @@ body{
 
 .col-12{
     width: 100%;
+    text-align: center;
 }
 .d-flex{
     display: flex;
@@ -74,14 +75,6 @@ body{
 
 .text-align-center{
     text-align: center;
-}
-
-.d-none{
-    display: none;
-}
-
-.d-block{
-    display: block;
 }
 
 .list_inline > li, .list_inline > li a{
@@ -115,7 +108,7 @@ header nav{
     color: var(--rl-font-light);
 }
 
-header nav > .desktop_menu, header nav > .start{
+header nav > .desktop_menu{
     display: none;
 }
 
@@ -178,6 +171,28 @@ header nav > .desktop_menu, header nav > .start{
 
 ****************************************************/
 
+#planning .container{
+    width: 100%;
+    background-color: var(--rl-secondary);
+    margin-top: 5rem;
+    padding: 5rem 1rem 5rem 1rem;
+}
+
+#planning .container .row .col-12 > img{
+    width: 400px;
+}
+
+#planning .container .row > .col-12{
+    color: var(--rl-font-light);
+}
+
+#planning .container .row .col-12 > h2{
+    font-size: 32px;
+}
+
+#planning .container .row .col-12 > p{
+    margin-top: 3rem;
+}
 
 
 
@@ -196,22 +211,11 @@ header nav > .desktop_menu, header nav > .start{
 /* #region Media */
 
 @media screen and (min-width: 768px) { 
-
-    
-
-    
-    .d-md-none{
-        display: none;
-    }
-    
-    .d-md-block{
-        display: block;
-    }
     
     .row{
         gap: 1rem;
     }
-    
+
     .col-md-4{
         width: calc((100% / 12 * 4) - 1rem);
         margin-top: 0;
@@ -229,6 +233,37 @@ header nav > .desktop_menu, header nav > .start{
         width: 100%;
     }
     
+}
+
+@media screen and (min-width: 1024px) {
+    header nav > .mobile_menu{
+        display: none;
+    }
+
+    header nav > .desktop_menu{
+        display: block;
+    }
+    
+    .col-lg-4{
+        width: calc((100% / 12 * 4) - 1rem);
+        margin-top: 0;
+    }
+
+    .col-lg-6{
+        width: calc(100% / 12 * 6);
+    }
+
+    .col-lg-8{
+        width: calc((100% / 12 * 8) - 1rem);
+    }
+
+    .col-lg-12{
+        width: 100%;
+    }
+
+    .demo .col-lg-8 img{
+        display: inline-block;
+    }
 }
 
 /* #endregion Media */
