@@ -64,7 +64,6 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 .d-flex{
@@ -253,8 +252,7 @@ header nav > .desktop_menu{
 }
 
 #testimonials .container{
-    width: 90%;  
-    margin-top: 5rem;
+    width: 90%;
     padding: 5rem 1rem 5rem 1rem;
 }
 
@@ -291,9 +289,183 @@ header nav > .desktop_menu{
     border-radius: 50%;
 }
 
+/****************************************************
+
+                SECTION 4 - BENEFITS
+
+****************************************************/
+
+
+#benefits{
+    background-color: var(--rl-secondary);
+    padding-bottom: 5rem;   
+}
+
+#benefits > h2{
+    text-align: center;
+    font-size: 32px;
+    color: var(--rl-font-light);
+    padding: 5rem 2rem 5rem 2rem;
+}
+
+#benefits .card{
+    background-color: var(--rl-bg-lighter);
+    padding: 3rem 2rem 2rem 2rem;
+    border-radius: 20px;
+}
+
+#benefits span{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--rl-secondary);
+}
+
+#benefits h3{
+    color: var(--rl-secondary);
+    margin: 1.5rem 0;
+}
+
+#benefits p{
+    color: var(--rl-font-light-dark);
+}
+
+.more{
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 3rem;
+    background-color: var(--rl-secondary);
+    color: var(--rl-font-light);
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+    margin-top: 2rem;
+}
+
+/****************************************************
+
+                SECTION 5 - ABOUT US
+
+****************************************************/
+
+#about_us{
+    margin-bottom: 5rem;
+}
+
+#about_us h2{
+    font-size: 40px ;
+    color: var(--rl-secondary);
+    margin-top: 8rem;
+}
+
+#about_us p{
+    margin: 3rem 0
+}
+
+#about_us img{
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: relative;
+}
+
+#about_us .fa-quote-left{
+    position: absolute;
+    left: 200px;
+    color: var(--rl-secondary);
+}
+
+#about_us h3{
+    color: var(--rl-secondary);
+    font-size: 28px;
+    line-height: 2.25rem;
+}
+
+.linkedin{
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 30px;
+    background-color: var(--rl-secondary);
+    color: var(--rl-font-light);
+    margin-top: 2rem;
+}
+
+.linkedin > i{
+    display: inline-block;
+    padding-right: 0.5rem;
+}
+
+
+/****************************************************
+
+                SECTION 6 - GET STARTED
+
+****************************************************/
+
+#get_started{
+    background-color: var(--rl-secondary);
+    padding: 5rem 0;
+}
+
+#get_started span{
+    color: var(--rl-font-light);
+    margin-bottom: 2rem;
+}
+
+#get_started h3{
+    font-size: 30px;
+    color: var(--rl-font-light);
+    margin-bottom: 3rem;
+}
+
+#get_started h2{
+    font-size: 60px;
+    color: var(--rl-font-free);
+    margin-bottom: 3rem;
+}
+
+#get_started p{
+    color: var(--rl-font-light);
+}
+
+.get_started{
+    border: none;
+    padding: 1rem 5rem;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.25rem;
+    color: var(--rl-secondary);
+    border-radius: 50px;
+    margin: 2rem 0;
+}
+
+#get_started h6{
+    color: var(--rl-font-light);
+}
+
+#get_started a{
+    color: var(--rl-font-light);
+}
+
 
 
 /* #endregion Main */
+
+
+/* #region Footer */
+
+#site_footer{
+    background-color: var(--rl-bg-dark);
+    padding: 2rem 0;
+    color: var(--rl-font-light);
+    font-size: 12px;
+}
+
+#site_footer a{
+    color: var(--rl-secondary);
+}
+
+
+/* #endregion Footer */
+
 
 
 
@@ -307,12 +479,7 @@ header nav > .desktop_menu{
 
 @media screen and (min-width: 768px) { 
     
-    .df-md-column{
-        display: flex;
-        flex-direction: column;
-        
-    }
-    
+
     .df-md{
         display: flex;
         flex-direction: row;
@@ -328,7 +495,7 @@ header nav > .desktop_menu{
     }
 
     .col-md-6{
-        width: calc(100% / 12 * 6);
+        width: calc((100% / 12 * 6) - 1rem);
     }
 
     .col-md-8{
@@ -337,6 +504,18 @@ header nav > .desktop_menu{
 
     .col-md-12{
         width: 100%;
+        text-align: center;
+    }
+
+    #testimonials .card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #testimonials .carddescription{
+        
+        
     }
     
 }
