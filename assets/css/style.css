@@ -391,6 +391,14 @@ figure .fa-quote-left{
     color: var(--rl-secondary);
 }
 
+figure #easteregg{
+    position: absolute;
+    scale: 0.4;
+    display: none;
+    left: 1px;
+    bottom: 40px;
+}
+
 #about_us h3{
     color: var(--rl-secondary);
     font-size: 28px;
@@ -486,7 +494,62 @@ figure .fa-quote-left{
 
 
 
+/****************************************************
 
+                    EFFECTS
+
+****************************************************/
+
+button:hover{
+    filter: brightness(90%);
+    transition: all 0.3s;
+    text-decoration: underline;
+}
+
+#get_started h2:hover{
+    animation-name: spin ;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(0.5);
+    }
+    
+    100%{
+        transform: scale(1);
+    }
+}
+
+#testimonials .card:hover > .testimonial {
+    border:  5px solid var(--rl-font-light-dark) ;
+    transition: 0.5s;
+
+}
+
+figure:hover > #easteregg{
+    display: inline-block;
+    animation-name: show;
+    animation-duration: 1.5s;
+}
+
+@keyframes show {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+    
+}
 
 
 
