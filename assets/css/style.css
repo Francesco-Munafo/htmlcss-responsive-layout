@@ -66,6 +66,7 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+
 .d-flex{
     display: flex;
 }
@@ -149,22 +150,21 @@ header nav > .desktop_menu{
 .demo .card{
     background-color: var(--rl-main-light);
     min-height: 100%;
-    padding: 3rem 2rem 0 2rem;
+    padding: 3rem 2rem 0rem 2rem;
     border-radius: 20px;
-    text-align: center;
-}
-.demo [class^='col-']{
-    
     
 }
 
 
-.demo .col-12 .card > h2, .demo .col-12 .card > i{
+.demo .col-12 .card > h2, .demo .col-12 .card > i, .demo .col-lg-6 > h2{
     color: var(--rl-main);
     margin-bottom: 1.5rem;
 }
+.demo .col-12 .card > i{
+    text-align: center;
+}
 
-.demo .col-12 .card > p{
+.demo .col-12 .card > p, .demo .col-lg-6 > p{
     color: var(--rl-font-light-dark);
     font-weight: 700;
     padding-bottom: 2rem;
@@ -172,18 +172,23 @@ header nav > .desktop_menu{
 
 .appstore{
     border: none;
-    padding: 0.7rem 4rem;
+    padding: 0.7rem 3.5rem;
     border-radius: 20px;
     background-color: var(--rl-main);
     color: var(--rl-font-light);
     font-weight: 700;
     letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
 }
 
-.demo img{
+.phone{
     margin-top: 2rem;
 }
 
+.phone{
+    max-width: 250px;
+    margin-bottom: -0.55rem;
+}
 
 
 /****************************************************
@@ -194,6 +199,7 @@ header nav > .desktop_menu{
 
 #planning{
     background-color: var(--rl-secondary);
+    padding: 3rem 0;
 }
 
 
@@ -210,11 +216,16 @@ header nav > .desktop_menu{
 
 #planning .container .row .col-12 .card > h2{
     font-size: 32px;
+    margin: 3rem 0;
 }
 
-#planning .container .row .col-12 .card > p{
+#planning .container .row .col-12 > p{
     margin-top: 3rem;
+}
+
+#planning .container .row .col-12 .bgc_light > p{
     font-style: italic;
+    padding: 0 5rem;
 }
 
 #planning .container .row .col-12 .card > i{
@@ -237,6 +248,10 @@ header nav > .desktop_menu{
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
+}
+
+.planningimg{
+    max-width: 100%;
 }
 
 /****************************************************
@@ -360,16 +375,19 @@ header nav > .desktop_menu{
     margin: 3rem 0
 }
 
-#about_us img{
-    width: 200px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
+figure{
     position: relative;
 }
 
-#about_us .fa-quote-left{
+figure img{
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+figure .fa-quote-left{
     position: absolute;
-    left: 200px;
+    left: 150px;
     color: var(--rl-secondary);
 }
 
@@ -513,10 +531,7 @@ header nav > .desktop_menu{
         align-items: center;
     }
 
-    #testimonials .carddescription{
-        
-        
-    }
+
     
 }
 
@@ -528,6 +543,7 @@ header nav > .desktop_menu{
     header nav > .desktop_menu{
         display: block;
     }
+
     
     .col-lg-4{
         width: calc((100% / 12 * 4) - 1rem);
@@ -535,7 +551,7 @@ header nav > .desktop_menu{
     }
 
     .col-lg-6{
-        width: calc(100% / 12 * 6);
+        width: calc((100% / 12 * 6) - 1rem);
     }
 
     .col-lg-8{
@@ -546,8 +562,13 @@ header nav > .desktop_menu{
         width: 100%;
     }
 
-    .demo .col-lg-8 img{
-        display: inline-block;
+    .phone{
+        margin-top: 8rem;
+    }
+
+    .df-lg{
+        display: flex;
+        gap: 1rem
     }
 }
 
